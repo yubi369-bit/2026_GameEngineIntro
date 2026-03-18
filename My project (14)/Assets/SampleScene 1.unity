@@ -645,6 +645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript1
   moveSpeed: 30
+  jumpforce: 7
 --- !u!114 &1069647961
 MonoBehaviour:
   m_ObjectHideFlags: 0
