@@ -25,4 +25,8 @@ public class TitleManger : MonoBehaviour
     {
         helpPanel.SetActive(false);
     }
+    public void Gotolobby()
+    {
+        SceneManager.LoadScene("TitleScene");
+    }
 }
