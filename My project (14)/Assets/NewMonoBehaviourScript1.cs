@@ -24,8 +24,16 @@ public class NewMonoBehaviourScript1 : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.name == "door")
-            Destroy(collision.gameObject);
+        SceneManager.LoadScene("PlayScene_" + collision.name);
+
+        if (collision.name == "Death")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        else
+        {
+            SceneManager.LoadScene("PlayScene_" + collision.name);
+        }
     }
     public void OnJump(InputValue value)
     {
@@ -62,5 +70,10 @@ public class NewMonoBehaviourScript1 : MonoBehaviour
             myanimator.SetBool("jump", false);
         }
             transform.Translate(Vector3.right * moveSpeed * MoveInput.x * Time.deltaTime);
+
+       
+    
+       
+    
     }   
 }
